@@ -1,0 +1,30 @@
+***Functionalities:
+Must be able to log-in by varying users
+must have a list of all services rendered
+must be able to calculate pricing for a selected services thus a function that gives the price of a product
+    once its selected and the quantity
+a text message system where i can send a text message to all customers if possible, a system where we can take survey
+from text messages
+the logged in user must be able to write a comment or review against a transaction before recording.
+must have Permission-based access to various functionalities
+must show time.
+must generate a receipt and record it against each transaction
+must have a section where suppliers of materials are saved and thier contacts
+must be able to take customer information
+every receipt detail is checked against stock levels to see how much has been consumed
+Must be able to tell when a particular stock is Low
+must be Mobile-friendly interface for on-the-go access
+Security:
+Data encryption
+Regular backups
+Role-based access control
+
+Ability to scale with the growth of the business
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
