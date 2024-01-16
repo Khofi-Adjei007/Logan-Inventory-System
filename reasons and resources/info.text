@@ -1,0 +1,29 @@
+# Problem
+### Background
+- _An inventory system meant assist me at my work place._
+### The Problem
+- _i cant keep track of what service is being rendered the most and as such cannot find the right data for analysis and projection_
+- _This matters very well, this is going to help me make the right decisions with regards to investment and machine and equipment purchasing._
+- _The materials acquired to do lamination for customers finishes and the amount made does not reflect it. Also, its difficult to know what each service is able to make individually thus resulting in severe losses_
+### Our Approach
+- _The approach is geared towards achieving efficiency in collecting data and implenting logics to arrange everything into _tranquility_._
+# Goals & Success
+- _To build a system that is effeicent in collecting data, easy to scale and very reliable_
+- _Our first success will be to see the system _functioning_. The upgrades and others shall follow suit_
+# Solution
+### Features
+- Describe the key features of the solution
+### User Flows & Mocks
+[![Wireframe](https://app.eraser.io/workspace/Uztjrd48szYHi6uvqNkc/preview?elements=BzskM2Zy_P-gQNUWJcqHSQ&type=embed)](https://app.eraser.io/workspace/Uztjrd48szYHi6uvqNkc?elements=BzskM2Zy_P-gQNUWJcqHSQ)
+
+### A basic sketch of the screen
+[![Low-fidelity sketches of the UI](https://app.eraser.io/workspace/Uztjrd48szYHi6uvqNkc/preview?elements=dJ6VcVi6XDxvIJUxwipzEA&type=embed)](https://app.eraser.io/workspace/Uztjrd48szYHi6uvqNkc?elements=dJ6VcVi6XDxvIJUxwipzEA)
+
+### Technical Architecture
+- Data model
+- System architecture
+### Open and Closed Questions
+- What remains to be discussed?
+- What have we already discussed and decided on?
+
+
