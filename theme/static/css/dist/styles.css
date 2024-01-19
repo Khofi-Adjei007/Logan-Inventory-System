@@ -786,6 +786,10 @@ select {
   margin-bottom: 0.5rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -806,6 +810,14 @@ select {
   height: 100vh;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -820,6 +832,18 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .flex-wrap {
@@ -840,6 +864,10 @@ select {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-b-2 {
@@ -883,6 +911,11 @@ select {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -895,6 +928,14 @@ select {
 
 .to-yellow-600 {
   --tw-gradient-to: #ca8a04 var(--tw-gradient-to-position);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .p-2 {
