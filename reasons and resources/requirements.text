@@ -1,7 +1,108 @@
-##Register Requirements
+Register Requirements
 First Name
 last Name
 email
 phone number
-
 human security check
+
+---------------------------------
+LOGIN REQUIREMENTS
+User Name
+Password
+authenticate
+
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+----------------------------------------
+DBMS: MySQL (ver. 8.2.0)
+Case sensitivity: plain=lower, delimited=lower
+Driver: MySQL Connector/J (ver. mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0), JDBC4.2)
+
+Ping: 45 ms
+SSL: yes
+
+Beginning configuration step: Stopping the server
+
+Setting innodb_fast_shutdown to do a clean shutdown (a full purge and a change buffer merge before shutting down).
+Starting process with command: C:\Program Files\MySQL\MySQL Server 8.2\bin\mysql.exe --defaults-extra-file="C:\Users\khofi\AppData\Local\Temp\6d59785c-99b4-44ce-a80f-f6a89a811267.ini" --user=root --default-auth=caching_sha2_password --host=localhost --port=3306 -e"SET GLOBAL innodb_fast_shutdown = 0"...
+Process for mysql, with ID 6720, was run successfully and exited with code 0.
+Successfully set innodb_fast_shutdown to do a clean shutdown.
+Executing mysqladmin shutdown to do a clean shutdown.
+Starting process with command: C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqladmin.exe --defaults-extra-file="C:\Users\khofi\AppData\Local\Temp\6d59785c-99b4-44ce-a80f-f6a89a811267.ini" --user=root --default-auth=caching_sha2_password --host=localhost --port=3306 shutdown...
+Process for mysqladmin, with ID 8652, was run successfully and exited with code 0.
+Successfully performed a clean shutdown.
+Stopping MySQL Server instance...
+Found Windows service for the server instance. Stopping MySQL service...
+MySQL service stopped successfully...
+Ended configuration step: Stopping the server
+
+Beginning configuration step: Writing configuration file
+
+Saving my.ini configuration file...
+Saved my.ini configuration file.
+Ended configuration step: Writing configuration file
+
+Beginning configuration step: Updating Windows Firewall rules
+
+Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 3306" protocol=TCP localport=3306
+
+Deleted 1 rule(s).
+Ok.
+
+
+Adding a Windows Firewall rule for MySQL82 on port 3306.
+Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 3306" protocol=TCP localport=3306 dir=in action=allow
+Ok.
+
+
+Successfully added the Windows Firewall rule.
+Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 33060" protocol=TCP localport=33060
+
+Deleted 1 rule(s).
+Ok.
+
+
+Adding a Windows Firewall rule for MySQL82 on port 33060.
+Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 33060" protocol=TCP localport=33060 dir=in action=allow
+Ok.
+
+
+Successfully added the Windows Firewall rule.
+Ended configuration step: Updating Windows Firewall rules
+
+Beginning configuration step: Adjusting Windows service
+
+Attempting to grant the required filesystem permissions to the 'NT AUTHORITY\NetworkService' account.
+Granted permissions to the data directory.
+Granted permissions to the install directory.
+Updating existing service...
+Existing service updated
+Ended configuration step: Adjusting Windows service
+
+Beginning configuration step: Starting the server
+
+Attempting to start service MySQL82...
+MySQL Server - start.
+C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqld.exe (mysqld 8.2.0) starting as process 18100
+InnoDB initialization has started.
+InnoDB initialization has ended.
+CA certificate ca.pem is self signed.
+Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+X Plugin ready for connections. Bind-address: '::' port: 33060
+C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqld.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
+Successfully started service MySQL82.
+Waiting until a connection to MySQL Server 8.2.0 can be established (with a maximum of 10 attempts)...
+Retry 1: Attempting to connect to Mysql@localhost:3306 with user root with a password...
+Successfully connected to MySQL Server 8.2.0.
+Ended configuration step: Starting the server
+
+
