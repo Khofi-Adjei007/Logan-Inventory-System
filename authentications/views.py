@@ -8,3 +8,6 @@ def duration(request):
 
 def login(request):
     return render(request, 'login_page.html')
+
+def homepage(request):
+    return render(request, 'home_page.html')

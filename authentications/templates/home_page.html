@@ -1,0 +1,81 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Logan Inventory System</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    {% tailwind_css %}
+</head>
+
+<body>
+ 
+ <div class="font-sans min-h-screen bg-gray-300 justify-center items-center">
+
+        <!--Start of inside items-->
+        <div class="bg-gray-50 mx-auto w-1/2 md:w-3/5 min-h-screen rounded-md">
+
+                <!--Start of Nav Bar-->
+                <nav class="md:flex md:items-center md:justify-between bg-yellow-500 w-full min-h-12 border-4 border-b-black border-r-0 border-t-0 border-l-0 shadow-md p-2">
+                
+                    <div class="flex justify-between items-center ">
+                        <span class="text-2xl font-[Poppins] cursor-pointer">
+                          <img class="h-10 inline"
+                            src="https://tailwindcss.com/_next/static/media/social-square.b622e290e82093c36cca57092ffe494f.jpg">
+                          tailwind
+                        </span>
+                  
+                        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                          <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                        </span>
+                      </div>
+
+                    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-sans font-semibold">
+                    <li class="mx-4 my-2 md:my-0"><a href="#" class="hover:text-cyan-500 duration-500">Home</a></li>
+                    <li class="mx-4 my-2 md:my-0"><a href="#" class="hover:text-cyan-500 duration-500">History</a></li>
+                    <li class="mx-4 my-2 md:my-0"><a href="#" class="hover:text-cyan-500 duration-500">Feed</a></li>
+                    <li class="mx-4 my-2 md:my-0"><a href="#" class="hover:text-cyan-500 duration-500">Report</a></li>
+                    </ul>
+                    
+                    <button class="bg-black text-white font-sans font-semibold duration-500 px-2 text-sm py-2 mx-4 hover:bg-cyan-500 rounded ">
+                    Get started
+                    </button>
+
+                </nav>
+                <!--End of Nav Bar-->
+
+
+                <!--Date Area-->
+                <div class="w-full h-16 justify-center items-center text-center p-5 font-bold">
+                    <h1>Saturday, 20th July, 2023</h1>
+                </div>
+                <!--Date Area-->
+
+
+                <!--Record taking area start-->
+                <div class="bg-yellow-100 h-3/5 p-2 block">
+                    <div class="flex">
+                        <span>Service items</span>
+                        <select name="" id="" class="form-select block w-3/5 rounded-md h-7 text-sm"></select>
+                        <option>Black & White Printing</option>
+                    </div>
+                </div>
+                <!--Record taking area ends-->
+
+        </div>
+        <!--End of inside items-->
+ </div>
+
+
+ <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
+</body>
+</html>
