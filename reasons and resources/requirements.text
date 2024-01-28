@@ -23,105 +23,34 @@ confirm
 
 
 
+                             <fieldset>
+                                    <legend class="text-sm font-semibold leading-4 text-gray-900">By Email</legend>
+                                    <div class="mt-6 space-y-">
+                                      <div class="relative flex gap-x-3">
+                                        
+                                        <div class="flex h-6 items-center">
+                                          <input id="comments" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                        </div>
+
+                                        <div class="text-sm leading-6">
+                                          <label for="comments" class="font-medium text-gray-900">Comments</label>
+                                          <p class="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                                        </div>
+
+                                      </div>
+                                      <div class="relative flex gap-x-3">
+                                        <div class="flex h-6 items-center">
+                                          <input id="candidates" name="candidates" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                                        </div>
+                                        <div class="text-sm leading-6">
+                                          <label for="candidates" class="font-medium text-gray-900">Candidates</label>
+                                          <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                  </fieldset>
 
 
-
-
-
-----------------------------------------
-DBMS: MySQL (ver. 8.2.0)
-Case sensitivity: plain=lower, delimited=lower
-Driver: MySQL Connector/J (ver. mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0), JDBC4.2)
-
-Ping: 45 ms
-SSL: yes
-
-Beginning configuration step: Stopping the server
-
-Setting innodb_fast_shutdown to do a clean shutdown (a full purge and a change buffer merge before shutting down).
-Starting process with command: C:\Program Files\MySQL\MySQL Server 8.2\bin\mysql.exe --defaults-extra-file="C:\Users\khofi\AppData\Local\Temp\6d59785c-99b4-44ce-a80f-f6a89a811267.ini" --user=root --default-auth=caching_sha2_password --host=localhost --port=3306 -e"SET GLOBAL innodb_fast_shutdown = 0"...
-Process for mysql, with ID 6720, was run successfully and exited with code 0.
-Successfully set innodb_fast_shutdown to do a clean shutdown.
-Executing mysqladmin shutdown to do a clean shutdown.
-Starting process with command: C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqladmin.exe --defaults-extra-file="C:\Users\khofi\AppData\Local\Temp\6d59785c-99b4-44ce-a80f-f6a89a811267.ini" --user=root --default-auth=caching_sha2_password --host=localhost --port=3306 shutdown...
-Process for mysqladmin, with ID 8652, was run successfully and exited with code 0.
-Successfully performed a clean shutdown.
-Stopping MySQL Server instance...
-Found Windows service for the server instance. Stopping MySQL service...
-MySQL service stopped successfully...
-Ended configuration step: Stopping the server
-
-Beginning configuration step: Writing configuration file
-
-Saving my.ini configuration file...
-Saved my.ini configuration file.
-Ended configuration step: Writing configuration file
-
-Beginning configuration step: Updating Windows Firewall rules
-
-Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 3306" protocol=TCP localport=3306
-
-Deleted 1 rule(s).
-Ok.
-
-
-Adding a Windows Firewall rule for MySQL82 on port 3306.
-Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 3306" protocol=TCP localport=3306 dir=in action=allow
-Ok.
-
-
-Successfully added the Windows Firewall rule.
-Attempting to delete a Windows Firewall rule with command: netsh.exe advfirewall firewall delete rule name="Port 33060" protocol=TCP localport=33060
-
-Deleted 1 rule(s).
-Ok.
-
-
-Adding a Windows Firewall rule for MySQL82 on port 33060.
-Attempting to add a Windows Firewall rule with command: netsh.exe advfirewall firewall add rule name="Port 33060" protocol=TCP localport=33060 dir=in action=allow
-Ok.
-
-
-Successfully added the Windows Firewall rule.
-Ended configuration step: Updating Windows Firewall rules
-
-Beginning configuration step: Adjusting Windows service
-
-Attempting to grant the required filesystem permissions to the 'NT AUTHORITY\NetworkService' account.
-Granted permissions to the data directory.
-Granted permissions to the install directory.
-Updating existing service...
-Existing service updated
-Ended configuration step: Adjusting Windows service
-
-Beginning configuration step: Starting the server
-
-Attempting to start service MySQL82...
-MySQL Server - start.
-C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqld.exe (mysqld 8.2.0) starting as process 18100
-InnoDB initialization has started.
-InnoDB initialization has ended.
-CA certificate ca.pem is self signed.
-Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
-X Plugin ready for connections. Bind-address: '::' port: 33060
-C:\Program Files\MySQL\MySQL Server 8.2\bin\mysqld.exe: ready for connections. Version: '8.2.0'  socket: ''  port: 3306  MySQL Community Server - GPL.
-Successfully started service MySQL82.
-Waiting until a connection to MySQL Server 8.2.0 can be established (with a maximum of 10 attempts)...
-Retry 1: Attempting to connect to Mysql@localhost:3306 with user root with a password...
-Successfully connected to MySQL Server 8.2.0.
-Ended configuration step: Starting the server
-
-
-
-
-
-
-
-   <span class=" font-bold flex flex-wrap mr-4 justify-center">Services Description</span>
-                        <select name="services" id="services" class="form-select w-3/5
-                                     rounded-md h-9 text-sm flex flex-wrap justify-center items-center mb-3">
-                        
-                        </select>
-
-
-                          <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">workcation.com/</span>
+                                   <legend class="text-sm font-semibold leading-6 text-gray-900">Push Notifications</legend>
+                                    <p class="mt-1 text-sm leading-6 text-gray-600">These are delivered via SMS to your mobile phone.</p>
