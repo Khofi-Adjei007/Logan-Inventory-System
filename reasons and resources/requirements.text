@@ -112,3 +112,16 @@ Successfully connected to MySQL Server 8.2.0.
 Ended configuration step: Starting the server
 
 
+
+
+
+
+
+   <span class=" font-bold flex flex-wrap mr-4 justify-center">Services Description</span>
+                        <select name="services" id="services" class="form-select w-3/5
+                                     rounded-md h-9 text-sm flex flex-wrap justify-center items-center mb-3">
+                        
+                        </select>
+
+
+                          <span class="flex select-none items-center pl-3 text-gray-500 sm:text-sm">workcation.com/</span>
