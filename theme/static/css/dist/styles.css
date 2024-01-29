@@ -957,6 +957,10 @@ select {
   height: 100vh;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-12 {
   min-height: 3rem;
 }
@@ -1232,6 +1236,16 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-12 {
@@ -1535,6 +1549,14 @@ select {
     width: auto;
   }
 
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .md\:w-\[90\%\] {
+    width: 90%;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1564,5 +1586,17 @@ select {
 
   .md\:opacity-100 {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-\[40\%\] {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-\[30\%\] {
+    width: 30%;
   }
 }
