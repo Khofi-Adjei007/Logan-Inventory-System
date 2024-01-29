@@ -135,30 +135,51 @@
                                 </div>
                               </div>
                           
-                              <div class="border-b border-gray-900/10 pb-12">
-                              <h2 class="text-base font-semibold leading-4 text-gray-900">Notifications</h2>
-                          
-                                <div class="mt-2 space-y-6 bg-black">
-                                  <fieldset class="grid grid-cols-3">
-                                    <div class="mt-3 space-y-6 grid grid-cols-3">
-                                      <div class="flex items-center gap-x-3">
-                                        <input id="push-everything" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                        <label for="push-everything" class="block text-sm font-medium leading-6 text-gray-900">Everything sdfds</label>
-                                      </div>
-
-                                      <div class="grid grid-cols-3 gap-x-3">
-                                        <input id="push-email" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                        <label for="push-email" class="block text-sm font-medium leading-6 text-gray-900">Same as email</label>
-                                      </div>
-
-                                      <div class="grid grid-cols-3 gap-x-3">
-                                        <input id="push-nothing" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                                        <label for="push-nothing" class="block text-sm font-medium leading-6 text-gray-900">No push notifications</label>
-                                      </div>
-
-                                    </div>
-                                  </fieldset>
+                              <div class="border-b border-gray-900/10 pb-4">
+                                <h2 class="text-base font-semibold leading-4 text-gray-900">Mode of File Exchange</h2>
+                                <div class="mt-2 space-y-6 p-2">
+                                    <fieldset class="flex flex-col">
+                                        <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
+                                            <!-- Email radio button -->
+                                            <input type="radio" id="email" name="notification_method" value="email" class="form-radio text-indigo-600 h-5 w-5">
+                                            <label for="email" class="text-gray-900 text-sm font-medium">Whatsapp</label>
+                            
+                                            <!-- Phone (SMS) radio button -->
+                                            <input type="radio" id="phone" name="notification_method" value="phone" class="form-radio text-indigo-600 h-5 w-5">
+                                            <label for="phone" class="text-gray-900 text-sm font-medium">Flash Drive</label>
+                            
+                                            <!-- Push notification radio button -->
+                                            <input type="radio" id="push_notification" name="notification_method" value="push_notification" class="form-radio text-indigo-600 h-5 w-5">
+                                            <label for="push_notification" class="text-gray-900 text-sm font-medium">Email</label>
+                                        </div>
+                                    </fieldset>
                                 </div>
+                            </div>
+                            
+
+                                <div class="border-b border-gray-900/10 pb-4">
+                                    <h2 class="text-base font-semibold leading-4 text-gray-900">Mode of Payment</h2>
+                                    <div class="mt-2 space-y-6 p-2">
+                                        <fieldset class="flex flex-col">
+                                            <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
+                                                <!-- Email radio button -->
+                                                <input type="radio" id="email" name="notification_method" value="email" class="form-radio text-indigo-600 h-5 w-5">
+                                                <label for="email" class="text-gray-900 text-sm font-medium">Cash</label>
+                                
+                                                <!-- Phone (SMS) radio button -->
+                                                <input type="radio" id="phone" name="notification_method" value="phone" class="form-radio text-indigo-600 h-5 w-5">
+                                                <label for="phone" class="text-gray-900 text-sm font-medium">Mobile Money</label>
+                                
+                                                <!-- Push notification radio button -->
+                                                <input type="radio" id="push_notification" name="notification_method" value="push_notification" class="form-radio text-indigo-600 h-5 w-5">
+                                                <label for="push_notification" class="text-gray-900 text-sm font-medium">Money</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                
+      
+
 
                               </div>
                             </div>
