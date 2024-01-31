@@ -17,15 +17,16 @@
             <h1 class="font-extrabold text-3xl py-12 animate-pulse">Registration Forms</h1>
         </div>
 
-        <form action=""  method='POST' class= "flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
+        <form action=""  id="registration-form" method='POST' class= "flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
             {% csrf_token %}
-            
-            {% csrf_token %}
+
             {% for field in form %}
+
+            {% for error in field.errors %}
+                    <p class="text-red-500 error-message hidden">{{ error }}</p>
+            {% endfor %}
+
                 <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" placeholder="{{ field.label }}" class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
-                {% for error in field.errors %}
-                    <p class="text-red-500">{{ error }}</p>
-                {% endfor %}
             {% endfor %}          
 
             <div class="px-2 mb-4"><span>I agree to the <a href="#" class="font-bold">Terms</a> and <a href="#" class="font-bold">Conditions</a></span></div>
@@ -36,5 +37,6 @@
     </div>
 
    </div>
+   <script src="/authentications/js/forms_script.js"></script>
 </body>
 </html>
