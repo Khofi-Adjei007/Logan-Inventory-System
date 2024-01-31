@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
     {% tailwind_css %}
 </head>
+
 <body>
    <div class="min-h-screen bg-gray-300 py-8 flex justify-center items-center">
 
@@ -16,17 +17,17 @@
             <h1 class="font-extrabold text-3xl py-12 animate-pulse">Registration Forms</h1>
         </div>
 
-        <form action="" class="flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
-            <input type="text" placeholder="First name..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
+        <form action=""  method='POST' class= "flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
+            {% csrf_token %}
+            
+            {% csrf_token %}
+            {% for field in form %}
+                <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" placeholder="{{ field.label }}" class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
+                {% for error in field.errors %}
+                    <p class="text-red-500">{{ error }}</p>
+                {% endfor %}
+            {% endfor %}          
 
-            <input type="text" placeholder="Last name..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
-
-            <input type="email" placeholder="Enter email..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
-
-            <input type="number" placeholder="Phone number..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
-        
-            <input type="password" placeholder="Create password..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
-        
             <div class="px-2 mb-4"><span>I agree to the <a href="#" class="font-bold">Terms</a> and <a href="#" class="font-bold">Conditions</a></span></div>
             <button type="submit" class="w-full md:w-[90%] py-2 bg-yellow-500 font-semibold hover:bg-yellow-400">Register</button>
 

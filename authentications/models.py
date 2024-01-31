@@ -7,3 +7,4 @@ class Users(models.Model):
     email = models.CharField(max_length=255)
     phone_number = models.CharField(max_length=10)
     password = models.CharField
+    tax_id = models.CharField(max_length=255)
