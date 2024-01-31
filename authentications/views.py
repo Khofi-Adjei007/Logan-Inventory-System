@@ -27,3 +27,8 @@ def login(request):
 
 def homepage(request):
     return render(request, 'home_page.html')
+
+
+
+
+
