@@ -905,6 +905,34 @@ select {
   margin-top: 1.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-\[-1\] {
+  margin-top: -1;
+}
+
+.mt-\[-5\] {
+  margin-top: -5;
+}
+
+.mt-\[-6\] {
+  margin-top: -6;
+}
+
+.mt-\[-3\] {
+  margin-top: -3;
+}
+
+.mt-\[-10\] {
+  margin-top: -10;
+}
+
+.mt-\[-2\] {
+  margin-top: -2;
+}
+
 .block {
   display: block;
 }
@@ -957,6 +985,10 @@ select {
   height: 15rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .min-h-12 {
   min-height: 3rem;
 }
@@ -987,6 +1019,22 @@ select {
 
 .w-1 {
   width: 0.25rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .flex-1 {
@@ -1080,6 +1128,10 @@ select {
   border-width: 4px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1107,6 +1159,11 @@ select {
 .border-yellow-600 {
   --tw-border-opacity: 1;
   border-color: rgb(202 138 4 / var(--tw-border-opacity));
+}
+
+.border-rose-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 241 242 / var(--tw-border-opacity));
 }
 
 .border-b-black {
@@ -1232,6 +1289,26 @@ select {
 .px-\[-2\] {
   padding-left: -2;
   padding-right: -2;
+}
+
+.py-\[-1\] {
+  padding-top: -1;
+  padding-bottom: -1;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-4 {
@@ -1579,6 +1656,18 @@ select {
 @media (min-width: 1024px) {
   .lg\:w-\[40\%\] {
     width: 40%;
+  }
+
+  .lg\:w-\[45\%\] {
+    width: 45%;
+  }
+
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
   }
 }
 

@@ -11,14 +11,13 @@
 
 <body>
    <div class="min-h-screen bg-gray-300 py-8 flex justify-center items-center">
-
-    <div class="flex flex-col justify-center items-center w-full md:w-[50%] lg:w-[40%] xl:w-[30%] bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg shadow-lg">
+    <div class="flex flex-col justify-center items-center w-full md:w-[50%] lg:w-[60%] xl:w-[30%] bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg shadow-lg">
         <div class="text-black h-32 w-full text-center">
-            <h1 class="font-extrabold text-3xl py-12 animate-pulse">Registration Forms</h1>
-            <div class="w-5 h-5 rounded-full px-[-2] " style="background-image: url('{% static 'images/system-logo.jpg' %}');"></div>
+            <div class="h-16 w-16 rounded-full mx-auto mt-2 bg-center bg-cover border border-rose-50 " style="background-image: url({%static '/images/system-logo.jpg' %} );"></div>
+            <h1 class="font-extrabold text-3xl py-2 animate-pulse">Registration Forms</h1>
         </div>
 
-        <form action=""  id="registration-form" method='POST' class= "flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
+        <form action=""  id="registration-form" method='POST' class= "flex flex-col justify-center items-center w-full px-4 py-10 bg-gray-100 rounded-lg">
             {% csrf_token %}
 
             {% for field in form %}
@@ -38,6 +37,6 @@
     </div>
 
    </div>
-   <script src="/static/js/registration_forms.js"></script>
+   <script src="/static/js/registration_form.js"></script>
 </body>
 </html>
