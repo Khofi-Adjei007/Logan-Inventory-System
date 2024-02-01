@@ -1,51 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registration-form');
-    const errorMessages = form.querySelectorAll('.error-message');
+// registration_forms.js
 
-    // Function to check if any input field is empty
-    function checkEmptyFields() {
-        let isEmpty = false;
-        form.querySelectorAll('input').forEach(function(input) {
-            if (input.value.trim() === '') {
-                isEmpty = true;
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide all error messages initially
+    var errorMessages = document.querySelectorAll(".error-message");
+    errorMessages.forEach(function(errorMessage) {
+        errorMessage.classList.add("hidden");
+    });
+
+    // Add event listener for form submission
+    document.getElementById("registration-form").addEventListener("submit", function(event) {
+        // Prevent form submission by default
+        event.preventDefault();
+
+        // Hide all error messages initially
+        var errorMessages = document.querySelectorAll(".error-message");
+        errorMessages.forEach(function(errorMessage) {
+            errorMessage.classList.add("hidden");
+        });
+
+        var inputs = document.querySelectorAll("#registration-form input[type='text']");
+        var emptyFields = [];
+
+        // Check each input field
+        inputs.forEach(function(input) {
+            if (input.value.trim() === "") {
+                var errorMessage = input.nextElementSibling;
+                errorMessage.classList.remove("hidden");
+                emptyFields.push(input.getAttribute("name"));
             }
         });
-        return isEmpty;
-    }
 
-    // Function to display error messages
-    function displayErrorMessages() {
-        errorMessages.forEach(function(errorMessage) {
-            errorMessage.classList.remove('hidden');
-        });
-    }
-
-    // Function to hide error messages
-    function hideErrorMessages() {
-        errorMessages.forEach(function(errorMessage) {
-            errorMessage.classList.add('hidden');
-        });
-    }
-
-    // Event listener for form submission
-    form.addEventListener('submit', function(event) {
-        if (checkEmptyFields()) {
-            event.preventDefault(); // Prevent form submission
-            displayErrorMessages();
-        } else {
-            hideErrorMessages();
+        // If there are no empty fields, submit the form
+        if (emptyFields.length === 0) {
+            this.submit();
         }
     });
-
-    // Event listener for input field change
-    form.querySelectorAll('input').forEach(function(input) {
-        input.addEventListener('input', function() {
-            if (input.value.trim() !== '') {
-                hideErrorMessages();
-            }
-        });
-    });
-
-    // Hide error messages on page load/refresh
-    hideErrorMessages();
 });

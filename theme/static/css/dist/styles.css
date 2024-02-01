@@ -953,6 +953,10 @@ select {
   height: 100vh;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .min-h-12 {
   min-height: 3rem;
 }
@@ -975,6 +979,14 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .flex-1 {
@@ -1048,16 +1060,16 @@ select {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .border-0 {
@@ -1156,6 +1168,14 @@ select {
   --tw-gradient-to: #ca8a04 var(--tw-gradient-to-position);
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1207,6 +1227,11 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-\[-2\] {
+  padding-left: -2;
+  padding-right: -2;
 }
 
 .pb-4 {
