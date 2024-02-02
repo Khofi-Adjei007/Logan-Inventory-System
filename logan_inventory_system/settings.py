@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'logan_inventory_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'logan_inventory_system',
+        'NAME': 'loganinventories',
         'USER': 'root',
         'PASSWORD': '@Tacitus0202',
         'HOST': 'localhost',
