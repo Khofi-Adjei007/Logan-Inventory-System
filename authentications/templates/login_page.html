@@ -17,7 +17,11 @@
         </div>
 
         <form action="" class="flex flex-col justify-center items-center w-full px-4 py-8 bg-gray-100 rounded-lg">
-            <input type="text" placeholder="Username..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
+            {% csrf_token %}
+
+            {% for field in form %}
+            <input type="{{field.field.widget.input_type}}" name="{{ field.name }}" placeholder="{{ field.label}}  class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
+            {% endfor %}
 
             <input type="password" placeholder="Enter password..." class="w-full md:w-[90%] mb-4 px-3 py-2 border-yellow-600 border-b-2 rounded-md" >
         

@@ -16,4 +16,11 @@ class RegistrationForm(forms.Form):
     phone_number = forms.CharField(max_length=15)
     password = forms.CharField(widget=forms.PasswordInput)
     repeat_password = forms.CharField(widget=forms.PasswordInput)
+
+
+
+class LoginForm(forms.Form):
+    userName = forms.CharField()
+    staff_Id = forms.CharField()
+    userPassword = forms.CharField()
     
