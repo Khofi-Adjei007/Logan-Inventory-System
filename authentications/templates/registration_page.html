@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register | Logan Inventory System</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    
     {% tailwind_css %}
 </head>
 
@@ -37,6 +38,50 @@
     </div>
 
    </div>
-   <script src="/static/js/registration_forms.js"></script>
+
+   <script>
+    // Define a JavaScript object to hold error messages
+    var errorMessages = {
+        first_name: "{{ form.first_name.errors.0 }}",
+        last_name: "{{ form.last_name.errors.0 }}",
+        email: "{{ form.email.errors.0 }}",
+        phone_number: "{{ form.phone_number.errors.0 }}",
+        password: "{{ form.password.errors.0 }}",
+    };
+
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        var inputs = this.querySelectorAll('input');
+        var valid = true;
+
+        // Remove existing error messages
+        this.querySelectorAll('.error-message').forEach(function(errorMsg) {
+            errorMsg.remove();
+        });
+
+        inputs.forEach(function(input) {
+            var fieldName = input.getAttribute('name');
+            if (!input.value.trim()) {
+                valid = false;
+                input.classList.add('border-red-500');
+                var errorMessage = document.createElement('p');
+                errorMessage.textContent = errorMessages[fieldName];
+                errorMessage.classList.add('text-red-500', 'text-sm', 'mt-1', 'error-message');
+                input.parentNode.insertBefore(errorMessage, input); // Insert before the input field
+
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.classList.remove('border-red-500');
+                        errorMessage.remove();
+                    }
+                });
+            }
+        });
+
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+   </script>
+
 </body>
 </html>

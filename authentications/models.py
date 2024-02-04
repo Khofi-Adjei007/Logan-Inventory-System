@@ -13,3 +13,6 @@ class UserLogin(models.Model):
     userName = models.CharField(max_length=255)
     staff_Id = models.CharField(max_length=20)
     userPassword = models.CharField(max_length=20)
+
+class user(models.Model):
+    pass

@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect
 from .forms import RegistrationForm
+import string
+from django.views import View
 
 
 # Create your views here.
@@ -10,9 +12,7 @@ def registration_page(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            # Process form data
-            # For example, save user to database
-            # user = form.save()
+            form.save_to_database()
             return render(request, 'registration_success.html')
     else:
         form = RegistrationForm()
