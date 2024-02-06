@@ -1,9 +1,9 @@
 from django import forms
 from django.db import models
 import string
+from django.contrib.auth.forms import UserCreationForm
 
 class RegistrationForm(forms.Form):
-
     first_name = forms.CharField(
         error_messages={'required': 'First Name is Required .',
                         'invalid': 'Name is Invalid.'})
@@ -33,9 +33,15 @@ class RegistrationForm(forms.Form):
 
 
 class LoginForm(forms.Form):
-    userName = forms.CharField()
-    staff_Id = forms.CharField()
-    userPassword = forms.CharField()
-   
+    username = forms.CharField(
+        error_messages={'required': 'Username is required.',
+                        'invalid': 'Invalid username.'})
     
+    password = forms.CharField(
+        widget=forms.PasswordInput,
+        error_messages={'required': 'Password is required.'})
     
+
+
+class homePageForm(forms.Form):
+    pass
