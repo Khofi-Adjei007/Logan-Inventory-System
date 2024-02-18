@@ -27,7 +27,7 @@ def login_page(request):
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            user = authenticate(request, username=username, password=password)
+            user = authenticate(request, username=username, password=password,)
             if user is not None:
                 login(request, user)
                 # Redirect to a success page or any other page you want
@@ -40,10 +40,11 @@ def login_page(request):
     return render(request, 'login_page.html', {'form': form})
 
 
+
 def homepage_page(request):
     if request.method == 'POST':
         form = homePageForm(request.POST)
-    return render(request, 'homepage_page.html')
+    return render(request, 'home_page.html')
 
 
 

@@ -21,14 +21,9 @@
 
                 <!--Start of Nav Bar here-->
                 <nav class="md:flex md:items-center md:justify-between bg-yellow-500 w-full min-h-12 border-4 border-b-black border-r-0 border-t-0 border-l-0 shadow-md p-2">
-                
+            
                     <div class="flex justify-between items-center ">
-                        <span class="text-2xl font-[Poppins] cursor-pointer">
-                          <img class="h-10 inline"
-                            src="https://tailwindcss.com/_next/static/media/social-square.b622e290e82093c36cca57092ffe494f.jpg">
-                          tailwind
-                        </span>
-                  
+                          <div class="h-16 w-16 rounded-full mx-auto mt-2 px-4 bg-center bg-cover border border-rose-50 " style="background-image: url({%static '/images/system-logo.jpg' %} );"></div>
                         <span class="text-3xl cursor-pointer mx-2 md:hidden block">
                           <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
                         </span>
@@ -160,15 +155,15 @@
                                         <fieldset class="flex flex-col">
                                             <div class="flex flex-col md:flex-row md:items-center md:space-x-4">
                                                 <!-- Email radio button -->
-                                                <input type="radio" id="email" name="notification_method" value="email" class="form-radio text-indigo-600 h-5 w-5">
+                                                <input type="checkbox" id="email" name="notification_method" value="email" class="form-radio text-indigo-600 h-5 w-5">
                                                 <label for="email" class="text-gray-900 text-sm font-medium">Cash</label>
                                 
                                                 <!-- Phone (SMS) radio button -->
-                                                <input type="radio" id="phone" name="notification_method" value="phone" class="form-radio text-indigo-600 h-5 w-5">
+                                                <input type="checkbox" id="phone" name="notification_method" value="phone" class="form-radio text-indigo-600 h-5 w-5">
                                                 <label for="phone" class="text-gray-900 text-sm font-medium ">Mobile Money</label>
                                 
                                                 <!-- Push notification radio button -->
-                                                <input type="radio" id="push_notification" name="notification_method" value="push_notification" class="form-radio text-indigo-600 h-5 w-5 text-sm">
+                                                <input type="checkbox" id="push_notification" name="notification_method" value="push_notification" class="form-radio text-indigo-600 h-5 w-5 text-sm">
                                                 <label for="push_notification" class="text-gray-900 text-sm font-medium ">Other</label>
                                             </div>
                                         </fieldset>
