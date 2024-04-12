@@ -1,0 +1,26 @@
+{
+  "name": "postcss-simple-vars",
+  "version": "7.0.1",
+  "description": "PostCSS plugin for Sass-like variables",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "sass",
+    "variables",
+    "vars"
+  ],
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "postcss/postcss-simple-vars",
+  "engines": {
+    "node": ">=14.0"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/postcss/"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.1"
+  }
+}

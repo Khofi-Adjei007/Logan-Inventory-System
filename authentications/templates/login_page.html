@@ -10,7 +10,7 @@
     {% tailwind_css %}
 </head>
 <body>
-   <div class="min-h-screen bg-gray-300 py-4 flex justify-center items-center">
+   <div class="min-h-screen bg-gray-300 py-2 flex justify-center items-center">
 
     <div class="flex flex-col justify-center items-center w-full md:w-[50%] lg:w-[40%] xl:w-[30%] bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg shadow-lg">
         <div class="text-black h-36 w-full text-center">
@@ -18,7 +18,7 @@
             <h1 class="font-extrabold text-3xl py-3 animate-pulse">Login</h1>
         </div>
 
-        <form action="" method="post" class="flex flex-col justify-center items-center w-full px-4 py-8 bg-gray-100 rounded-lg">
+        <form action="" method="post" class="flex flex-col justify-center items-center w-full px-4 py-4 bg-gray-100 rounded-lg">
             {% csrf_token %}
 
             {% for field in form %}

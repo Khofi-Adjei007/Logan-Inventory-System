@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -211,6 +211,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -234,9 +236,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -687,6 +689,10 @@ select {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop {
@@ -737,6 +743,10 @@ select {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .container {
@@ -905,16 +915,8 @@ select {
   margin-top: 1.5rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
 .block {
   display: block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -927,10 +929,6 @@ select {
 
 .hidden {
   display: none;
-}
-
-.h-10 {
-  height: 2.5rem;
 }
 
 .h-16 {
@@ -1001,10 +999,6 @@ select {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.grid-flow-col {
-  grid-auto-flow: column;
 }
 
 .grid-cols-1 {
@@ -1268,21 +1262,12 @@ select {
   text-align: center;
 }
 
-.font-\[Poppins\] {
-  font-family: Poppins;
-}
-
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {
