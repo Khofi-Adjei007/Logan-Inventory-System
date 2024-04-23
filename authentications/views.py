@@ -16,7 +16,7 @@ def registration_page(request):
             return render(request, 'registration_success.html')
     else:
         form = RegistrationForm()
-    return render(request, 'registration_page.html', {'form': form})
+    return render(request, 'registration_page.html', {'form': form, 'form_errors': form.errors})
 
 
 

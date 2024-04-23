@@ -39,49 +39,42 @@
 
    </div>
 
-   <script>
-    // Define a JavaScript object to hold error messages
-    var errorMessages = {
-        first_name: "{{ form.first_name.errors.0 }}",
-        last_name: "{{ form.last_name.errors.0 }}",
-        email: "{{ form.email.errors.0 }}",
-        phone_number: "{{ form.phone_number.errors.0 }}",
-        password: "{{ form.password.errors.0 }}",
-    };
-
+<script>
     document.getElementById('registration-form').addEventListener('submit', function(event) {
         var inputs = this.querySelectorAll('input');
         var valid = true;
 
-        // Remove existing error messages
-        this.querySelectorAll('.error-message').forEach(function(errorMsg) {
-            errorMsg.remove();
-        });
-
+        // Loop through each input field
         inputs.forEach(function(input) {
             var fieldName = input.getAttribute('name');
+            var errorMessageElement = input.nextElementSibling; // Get the next sibling of the input field
+
+            // Check if the input is empty
             if (!input.value.trim()) {
                 valid = false;
                 input.classList.add('border-red-500');
-                var errorMessage = document.createElement('p');
-                errorMessage.textContent = errorMessages[fieldName];
-                errorMessage.classList.add('text-red-500', 'text-sm', 'mt-1', 'error-message');
-                input.parentNode.insertBefore(errorMessage, input); // Insert before the input field
 
-                input.addEventListener('input', function() {
-                    if (this.value.trim()) {
-                        this.classList.remove('border-red-500');
-                        errorMessage.remove();
-                    }
-                });
+                // Display error message
+                if (!errorMessageElement || !errorMessageElement.classList.contains('error-message')) {
+                    errorMessageElement = document.createElement('p');
+                    var errorMessages = JSON.parse('{{ form_errors|escapejs }}'); // Get the error message from the form object
+                    errorMessageElement.classList.add('text-red-500', 'text-sm', 'mt-1', 'error-message');
+                    input.parentNode.insertBefore(errorMessageElement, input.nextElementSibling); // Insert after the input field
+                }
+            } else {
+                input.classList.remove('border-red-500');
+                if (errorMessageElement && errorMessageElement.classList.contains('error-message')) {
+                    errorMessageElement.remove(); // Remove error message if input is valid
+                }
             }
         });
 
         if (!valid) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent form submission if there are validation errors
         }
     });
-   </script>
+</script>
+
 
 </body>
 </html>
